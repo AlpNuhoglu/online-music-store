@@ -69,7 +69,6 @@ It supports:
 ## 🔐 Environment Variables
 Create a `.env` file in the **backend** folder:
 
-```bash
 MONGO_URI=your-mongodb-connection-string
 JWT_SECRET=your-secret-key
 PORT=5001
