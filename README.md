@@ -51,9 +51,56 @@ This repository contains a full-stack music instrument store built with the MERN
 
 ## 🔐 Environment Variables
 Create a `.env` file in the **backend** directory:
-```bash
+
 MONGO_URI=your-mongodb-connection-string
 JWT_SECRET=your-secret-key
 PORT=5001
 EMAIL_USER=your-email@example.com
 EMAIL_PASS=your-email-password
+
+## 🚀 Local Setup
+
+### Backend
+~~~bash
+cd backend
+npm install
+npm start
+# Server runs at http://localhost:5001
+~~~
+
+- **Key scripts:**
+  - `npm run test` — Run Jest unit & integration tests  
+  - `npm run test:watch` — Run tests in watch mode  
+
+### Frontend
+~~~bash
+cd frontend
+npm install
+npm start
+# App runs at http://localhost:3000
+~~~
+
+## 🐳 Docker & Docker Compose
+The provided `docker-compose.yml` defines three services:
+
+- **mongo** — MongoDB (data persisted in a Docker volume)  
+- **backend** — Node/Express API  
+- **frontend** — Nginx serving the React build  
+
+**Build and run:**
+~~~bash
+docker compose up --build
+~~~
+- Frontend: [http://localhost](http://localhost)  
+- API: [http://localhost:5001](http://localhost:5001)  
+
+## 🚢 Deployment Notes
+1. Build and push Docker images to your registry.  
+2. On the production server:
+   ~~~bash
+   docker compose pull && docker compose up -d
+   ~~~
+3. Ensure your `.env` variables are configured on the host.
+
+## 📜 License
+MIT © Alp Nuhoglu
