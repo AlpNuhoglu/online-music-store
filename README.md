@@ -51,12 +51,13 @@ This repository contains a full-stack music instrument store built with the MERN
 
 ## 🔐 Environment Variables
 Create a `.env` file in the **backend** directory:
-
+~~~bash
 MONGO_URI=your-mongodb-connection-string
 JWT_SECRET=your-secret-key
 PORT=5001
 EMAIL_USER=your-email@example.com
 EMAIL_PASS=your-email-password
+~~~
 
 ## 🚀 Local Setup
 
