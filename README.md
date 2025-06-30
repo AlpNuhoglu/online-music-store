@@ -77,10 +77,11 @@ EMAIL_PASS=your-email-password
 
 Note: The frontend is decoupled and reads no secrets; it communicates with the backend on port 5001 by default.
 
+---
 
-🚀 Local Setup
+## 🚀 Local Setup
 
-🖥️ Backend
+## 🖥️ Backend
 
 cd backend
 npm install
@@ -91,13 +92,17 @@ Key scripts:
 	•	npm run test — run Jest unit & integration tests
 	•	npm run test:watch — watch mode
 
-🎨 Frontend
+--- 
+
+## 🎨 Frontend
 
 cd frontend
 npm install
 npm start        # Runs React app at http://localhost:3000
 
-🐳 Docker & Docker Compose
+---
+
+## 🐳 Docker & Docker Compose
 
 A docker-compose.yml file orchestrates three services:
 	•	mongo — MongoDB (data in a volume)
@@ -109,12 +114,17 @@ docker compose up --build
 	•	Frontend: http://localhost
 	•	API: http://localhost:5001
 
-📜 License
+---
+
+
+## 🚢 Deployment Notes
+1.	Build and push images to your Docker registry.
+2.	On your server:
+	docker compose pull && docker compose up -d
+3.	Ensure environment variables are set on the host.
+
+--- 
+
+## 📜 License
 
 MIT © AlpNuhoglu
-
-🚢 Deployment Notes
-	1.	Build and push images to your Docker registry.
-	2.	On your server:
-docker compose pull && docker compose up -d
-	3.	Ensure environment variables are set on the host.
