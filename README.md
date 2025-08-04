@@ -102,6 +102,3 @@ docker compose up --build
    docker compose pull && docker compose up -d
    ~~~
 3. Ensure your `.env` variables are configured on the host.
-
-## 📜 License
-MIT © Alp Nuhoglu
