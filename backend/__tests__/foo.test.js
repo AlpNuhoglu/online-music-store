@@ -1,7 +1,7 @@
 
 
 const request = require('supertest');
-// Import your Express app (make sure server.js exports the app instance, not just the listener)
+
 const app = require('../server');
 
 describe('GET /products', () => {
